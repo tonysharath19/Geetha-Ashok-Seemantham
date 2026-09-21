@@ -945,12 +945,10 @@
               Venue - Location
             </a>
 
-            <a id="addToCalBtn"
-              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Geetha%27s%20Seemantha%20Celebration&dates=20260923T050000Z/20260923T093000Z&details=You%20are%20cordially%20invited%20to%20celebrate%20the%20auspicious%20Seemantha%20ceremony%20of%20Geetha.%20With%20love%2C%20Geetha%2C%20Ashok%20%26%20Family.%0AVenue%3A%20Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%0ALocation%3A%20https%3A%2F%2Fmaps.app.goo.gl%2FnAv3u72qVnfDifBV6&location=Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%2C%20Karnataka%2C%20India"
-              target="_blank" rel="noopener noreferrer"
+            <button id="addToCalBtn" onclick="openCalendarModal()"
               class="w-full h-full min-h-[32px] sm:min-h-[44px] px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[8.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
               Add To Calendar
-            </a>
+            </button>
 
             <button onclick="openScheduleModal()"
               class="w-full h-full min-h-[32px] sm:min-h-[44px] px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[8.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
@@ -1116,6 +1114,60 @@
         class="w-full py-2.5 rounded-full bg-stone-900 hover:bg-stone-800 text-white font-playfair-sc text-xs uppercase tracking-widest font-bold transition">
         Done
       </button>
+
+    </div>
+  </dialog>
+
+  <!-- ========================================================================= -->
+  <!-- INTERACTIVE POPUP MODAL 3: ADD TO CALENDAR -->
+  <!-- ========================================================================= -->
+  <dialog id="calendarModal"
+    class="rounded-3xl p-0 max-w-md w-[92%] luxe-card shadow-2xl border border-amber-200 m-auto">
+    <div class="p-5 sm:p-7 flex flex-col space-y-3.5 text-center">
+
+      <div class="flex items-center justify-between border-b border-amber-200 pb-2.5 text-left">
+        <div>
+          <p class="font-playfair-sc text-xs uppercase tracking-widest text-amber-900 font-bold">Save The Date</p>
+          <h3 class="font-elsie font-black text-2xl text-stone-900">Add To Calendar</h3>
+        </div>
+        <button onclick="closeCalendarModal()"
+          class="w-7 h-7 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 flex items-center justify-center text-sm transition">
+          ✕
+        </button>
+      </div>
+
+      <!-- Event Summary Card -->
+      <div class="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200 text-left space-y-1 font-bodoni">
+        <p class="font-bold text-stone-900 text-sm sm:text-base">Geetha's Seemantha Celebration</p>
+        <p class="text-xs sm:text-sm text-amber-950 font-medium">📅 Wednesday, 23 Sep 2026 • 10:30 AM – 1:00 PM</p>
+        <p class="text-xs text-stone-600">📍 Kadamba Gardenia, Jalahalli, Bengaluru</p>
+      </div>
+
+      <!-- Choice Options -->
+      <div class="space-y-2.5 pt-1 w-full">
+        <!-- Option 1: Mobile Phone & Apple Calendar (.ics) -->
+        <button onclick="downloadIcsFile()"
+          class="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-playfair-sc text-xs uppercase tracking-wider font-bold shadow-[0_4px_14px_rgba(180,83,9,0.25)] flex items-center justify-center gap-2.5 transition transform hover:scale-[1.01] active:scale-98">
+          <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>Phone / Apple / Device (.ics)</span>
+        </button>
+
+        <!-- Option 2: Google Calendar (Web) -->
+        <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Geetha%27s%20Seemantha%20Celebration&dates=20260923T103000/20260923T130000&ctz=Asia/Kolkata&details=You%20are%20cordially%20invited%20to%20celebrate%20the%20auspicious%20Seemantha%20ceremony%20of%20Geetha.%20With%20love%2C%20Geetha%2C%20Ashok%20%26%20Family.%0AVenue%3A%20Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%0ALocation%3A%20https%3A%2F%2Fmaps.app.goo.gl%2FnAv3u72qVnfDifBV6&location=Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%2C%20Karnataka%2C%20India"
+          target="_blank" rel="noopener noreferrer"
+          class="w-full py-3 px-4 rounded-2xl bg-white hover:bg-stone-50 text-stone-800 font-playfair-sc text-xs uppercase tracking-wider font-bold border border-stone-300 shadow-sm flex items-center justify-center gap-2.5 transition transform hover:scale-[1.01] active:scale-98">
+          <svg class="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+          </svg>
+          <span>Google Calendar (Web)</span>
+        </a>
+      </div>
+
+      <p class="text-[11px] font-bodoni italic text-stone-500 pt-0.5">
+        Tip: On mobile phones, tap "Phone / Apple / Device" to open the pre-filled event directly in your device calendar app.
+      </p>
 
     </div>
   </dialog>
@@ -1402,7 +1454,7 @@
     // Wheel Scroll Event
     let lastWheelTime = 0;
     window.addEventListener('wheel', (e) => {
-      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open)) return;
+      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open) || (calendarModal && calendarModal.open)) return;
       if (Math.abs(e.deltaY) < 15) return;
       const now = Date.now();
       if (now - lastWheelTime < 650 || isTransitioningCard) return;
@@ -1426,13 +1478,13 @@
     let touchStartY = 0;
     let touchStartX = 0;
     window.addEventListener('touchstart', (e) => {
-      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open)) return;
+      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open) || (calendarModal && calendarModal.open)) return;
       touchStartY = e.touches[0].clientY;
       touchStartX = e.touches[0].clientX;
     }, { passive: true });
 
     window.addEventListener('touchend', (e) => {
-      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open)) return;
+      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open) || (calendarModal && calendarModal.open)) return;
       const touchEndY = e.changedTouches[0].clientY;
       const touchEndX = e.changedTouches[0].clientX;
       const diffY = touchStartY - touchEndY;
@@ -1450,7 +1502,7 @@
 
     // Keyboard Navigation
     window.addEventListener('keydown', (e) => {
-      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open)) return;
+      if ((voteModal && voteModal.open) || (scheduleModal && scheduleModal.open) || (calendarModal && calendarModal.open)) return;
       if (['ArrowDown', 'PageDown', ' '].includes(e.key)) {
         e.preventDefault();
         clearPullUpHint();
@@ -1517,6 +1569,7 @@
     // -------------------------------------------------------------
     const voteModal = document.getElementById('voteModal');
     const scheduleModal = document.getElementById('scheduleModal');
+    const calendarModal = document.getElementById('calendarModal');
     let selectedGenderChoiceVal = "";
 
     function openVoteModal() {
@@ -1641,7 +1694,14 @@
       scheduleModal.close();
     }
 
-    [voteModal, scheduleModal].forEach(modal => {
+    function openCalendarModal() {
+      if (calendarModal) calendarModal.showModal();
+    }
+    function closeCalendarModal() {
+      if (calendarModal) calendarModal.close();
+    }
+
+    [voteModal, scheduleModal, calendarModal].forEach(modal => {
       if (!modal) return;
       modal.addEventListener('click', (e) => {
         const rect = modal.getBoundingClientRect();
@@ -1654,18 +1714,52 @@
     });
 
     // -------------------------------------------------------------
-    // Add To Calendar Integration
+    // Add To Calendar (.ics & Google Calendar)
     // -------------------------------------------------------------
-    function addToCalendar() {
-      const title = encodeURIComponent("Geetha's Seemantha Celebration");
-      const details = encodeURIComponent("You are cordially invited to celebrate the auspicious Seemantha ceremony of Geetha. With love, Geetha, Ashok & Family.\nVenue: Kadamba Gardenia, Jalahalli, Bengaluru\nLocation: https://maps.app.goo.gl/nAv3u72qVnfDifBV6");
-      const location = encodeURIComponent("Kadamba Gardenia, Jalahalli, Bengaluru, Karnataka, India");
+    function downloadIcsFile() {
+      const icsLines = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Geetha Ashok Seemantham//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "BEGIN:VTIMEZONE",
+        "TZID:Asia/Kolkata",
+        "BEGIN:STANDARD",
+        "DTSTART:19700101T000000",
+        "TZOFFSETFROM:+0530",
+        "TZOFFSETTO:+0530",
+        "TZNAME:IST",
+        "END:STANDARD",
+        "END:VTIMEZONE",
+        "BEGIN:VEVENT",
+        "UID:geetha-seemantha-20260923@" + (window.location.hostname || "invitation"),
+        "DTSTAMP:" + new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z",
+        "DTSTART;TZID=Asia/Kolkata:20260923T103000",
+        "DTEND;TZID=Asia/Kolkata:20260923T130000",
+        "SUMMARY:Geetha's Seemantha Celebration",
+        "DESCRIPTION:You are cordially invited to celebrate the auspicious Seemantha ceremony of Geetha. With love\\, Geetha\\, Ashok & Family.\\nVenue: Kadamba Gardenia\\, Jalahalli\\, Bengaluru\\nMap: https://maps.app.goo.gl/nAv3u72qVnfDifBV6",
+        "LOCATION:Kadamba Gardenia\\, Jalahalli\\, Bengaluru\\, Karnataka 560013\\, India",
+        "STATUS:CONFIRMED",
+        "SEQUENCE:0",
+        "BEGIN:VALARM",
+        "TRIGGER:-P1D",
+        "ACTION:DISPLAY",
+        "DESCRIPTION:Reminder: Geetha's Seemantha Celebration Tomorrow",
+        "END:VALARM",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ];
 
-      const startDate = "20260923T050000Z";
-      const endDate = "20260923T093000Z";
-
-      const googleCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
-      window.open(googleCalUrl, '_blank');
+      const icsBlob = new Blob([icsLines.join("\r\n")], { type: "text/calendar;charset=utf-8" });
+      const icsUrl = URL.createObjectURL(icsBlob);
+      const downloadLink = document.createElement("a");
+      downloadLink.href = icsUrl;
+      downloadLink.setAttribute("download", "Geetha-Seemantha-Celebration.ics");
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+      setTimeout(() => URL.revokeObjectURL(icsUrl), 1000);
     }
 
     // -------------------------------------------------------------
