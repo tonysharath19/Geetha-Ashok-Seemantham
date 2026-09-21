@@ -223,9 +223,17 @@
     }
 
     .card-sec3-topcenter {
-      width: 94%;
-      max-width: 390px;
-      margin: clamp(2.5rem, 6.5vh, 3.75rem) auto auto auto;
+      width: clamp(250px, 78vw, 320px);
+      max-width: 325px;
+      margin: clamp(0.35rem, 1vh, 0.75rem) auto auto auto;
+    }
+
+    @media (min-width: 640px) {
+      .card-sec3-topcenter {
+        width: 94%;
+        max-width: 390px;
+        margin: clamp(2.5rem, 6.5vh, 3.75rem) auto auto auto;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -644,53 +652,53 @@
       <!-- Top-Middle Compact Luxury Glass Slab Container -->
       <div class="relative z-10 card-sec3-topcenter">
         <div
-          class="w-full compact-slab p-4 sm:p-5 lg:p-5 xl:p-6 rounded-2xl sm:rounded-3xl luxe-card bg-white/90 sm:bg-white/85 backdrop-blur-xl flex flex-col items-center text-center space-y-2 sm:space-y-2.5 relative">
+          class="w-full compact-slab p-3 sm:p-5 lg:p-5 xl:p-6 rounded-2xl sm:rounded-3xl luxe-card bg-white/90 sm:bg-white/85 backdrop-blur-xl flex flex-col items-center text-center space-y-1.5 sm:space-y-2.5 relative">
 
           <!-- Subheading in Royal Badge: Playfair Display SC -->
           <div class="s3-item">
             <span
-              class="royal-badge font-playfair-sc text-[11px] sm:text-xs uppercase tracking-[0.18em] text-rose-950 font-bold py-1 px-3.5">
+              class="royal-badge font-playfair-sc text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.18em] text-rose-950 font-bold py-0.5 sm:py-1 px-3 sm:px-3.5">
               <span class="text-pink-500 text-xs">✦</span> The Sweet Mystery <span class="text-sky-500 text-xs">✦</span>
             </span>
           </div>
 
           <!-- Main Heading (Elsie) & Sub Heading (Charm): A Little Girl? Or A Little Boy? -->
-          <div class="s3-item flex items-center justify-center text-center gap-2 flex-wrap">
-            <span class="font-elsie font-black text-lg sm:text-xl lg:text-2xl xl:text-3xl text-rose-800 leading-tight">
+          <div class="s3-item flex items-center justify-center text-center gap-1.5 sm:gap-2 flex-wrap">
+            <span class="font-elsie font-black text-base sm:text-xl lg:text-2xl xl:text-3xl text-rose-800 leading-tight">
               A Little Girl?
             </span>
-            <span class="font-charm text-2xl sm:text-2xl lg:text-3xl text-amber-700 leading-none font-bold">
+            <span class="font-charm text-xl sm:text-2xl lg:text-3xl text-amber-700 leading-none font-bold">
               Or
             </span>
-            <span class="font-elsie font-black text-lg sm:text-xl lg:text-2xl xl:text-3xl text-sky-800 leading-tight">
+            <span class="font-elsie font-black text-base sm:text-xl lg:text-2xl xl:text-3xl text-sky-800 leading-tight">
               A Little Boy?
             </span>
           </div>
 
           <!-- Sub Heading (Charm): Who knows… -->
           <p
-            class="s3-item font-charm italic text-base sm:text-lg lg:text-xl text-stone-700 font-bold text-center leading-tight">
+            class="s3-item font-charm italic text-xs sm:text-lg lg:text-xl text-stone-700 font-bold text-center leading-tight">
             Who knows… But one thing we know for sure -
           </p>
 
           <!-- Main Revelation Heading (Elsie) -->
           <h3
-            class="s3-item font-elsie font-black text-base sm:text-lg lg:text-xl xl:text-2xl text-deep-charcoal leading-tight text-center">
+            class="s3-item font-elsie font-black text-sm sm:text-lg lg:text-xl xl:text-2xl text-deep-charcoal leading-tight text-center">
             An Angel Is On Its Way.
           </h3>
 
           <!-- Single Vote Button: Playfair Display SC -->
-          <div class="s3-item pt-1 w-full flex flex-col items-center">
+          <div class="s3-item pt-0.5 sm:pt-1 w-full flex flex-col items-center">
             <button onclick="openVoteModal()"
-              class="w-full sm:w-auto min-w-[160px] sm:min-w-[170px] py-2.5 sm:py-2.5 px-7 sm:px-7 rounded-full bg-gradient-to-r from-sky-500 to-pink-500 hover:from-sky-600 hover:to-pink-600 text-white font-playfair-sc text-xs uppercase tracking-widest font-bold shadow-[0_6px_22px_rgba(56,189,248,0.3)] hover:shadow-[0_8px_28px_rgba(244,114,182,0.4)] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 border border-white/60">
-              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+              class="w-auto min-w-[130px] sm:min-w-[170px] py-1.5 sm:py-2.5 px-6 sm:px-7 rounded-full bg-gradient-to-r from-sky-500 to-pink-500 hover:from-sky-600 hover:to-pink-600 text-white font-playfair-sc text-[11px] sm:text-xs uppercase tracking-widest font-bold shadow-[0_4px_16px_rgba(56,189,248,0.25)] sm:shadow-[0_6px_22px_rgba(56,189,248,0.3)] hover:shadow-[0_8px_28px_rgba(244,114,182,0.4)] transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 sm:gap-2 border border-white/60">
+              <svg class="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path
                   d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
               </svg>
               <span>Vote</span>
             </button>
             <p id="genderVoteNotice"
-              class="text-xs sm:text-sm font-bodoni italic text-stone-600 pt-1 font-medium text-center">
+              class="text-[11px] sm:text-sm font-bodoni italic text-stone-600 pt-0.5 sm:pt-1 font-medium text-center">
               Take a guess & cast your loving vote
             </p>
           </div>
