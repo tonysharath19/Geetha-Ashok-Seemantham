@@ -285,9 +285,17 @@
     }
 
     .card-sec5-right {
-      width: 95%;
-      max-width: 440px;
-      margin: clamp(2.25rem, 6vh, 3.75rem) auto auto auto;
+      width: clamp(260px, 86vw, 340px);
+      max-width: 345px;
+      margin: clamp(0.35rem, 1vh, 0.75rem) auto auto auto;
+    }
+
+    @media (min-width: 640px) {
+      .card-sec5-right {
+        width: 95%;
+        max-width: 440px;
+        margin: clamp(2.25rem, 6vh, 3.75rem) auto auto auto;
+      }
     }
 
     @media (min-width: 1024px) {
@@ -862,12 +870,12 @@
       <!-- Right-Anchored Luxury Glass Slab Container -->
       <div class="relative z-10 card-sec5-right">
         <div
-          class="w-full p-3 sm:p-6 lg:p-6 xl:p-7 rounded-2xl sm:rounded-3xl luxe-card bg-white/90 sm:bg-white/85 backdrop-blur-xl flex flex-col items-center text-center space-y-1.5 sm:space-y-3.5 relative">
+          class="w-full p-2.5 sm:p-6 lg:p-6 xl:p-7 rounded-2xl sm:rounded-3xl luxe-card bg-white/90 sm:bg-white/85 backdrop-blur-xl flex flex-col items-center text-center space-y-1 sm:space-y-3.5 relative">
 
           <!-- Subheading in Royal Badge: Playfair Display SC -->
           <div class="s5-item flex justify-center">
             <span
-              class="royal-badge font-playfair-sc text-[10px] sm:text-xs uppercase tracking-[0.18em] text-amber-950 font-bold py-0.5 px-3">
+              class="royal-badge font-playfair-sc text-[9.5px] sm:text-xs uppercase tracking-[0.18em] text-amber-950 font-bold py-0.5 px-2.5 sm:px-3">
               <span class="text-amber-600 text-xs">✦</span> You Are Cordially Invited <span
                 class="text-amber-600 text-xs">✦</span>
             </span>
@@ -875,75 +883,77 @@
 
           <!-- Main Heading: Elsie -->
           <div class="s5-item space-y-0.5 text-center w-full">
-            <h2 class="font-elsie font-black text-lg sm:text-3xl md:text-4xl text-deep-charcoal leading-tight">
+            <h2 class="font-elsie font-black text-base sm:text-3xl md:text-4xl text-deep-charcoal leading-tight">
               With Great Joy, We Invite You
             </h2>
-            <p class="font-elsie font-black italic text-xl sm:text-2xl md:text-3xl text-[#9F1239]">
+            <p class="font-elsie font-black italic text-lg sm:text-2xl md:text-3xl text-[#9F1239]">
               Geetha's Seemantha
             </p>
           </div>
 
           <!-- Royal Divider -->
-          <div class="s5-item royal-divider">
+          <div class="s5-item royal-divider my-0 sm:my-0.5">
             <span class="royal-divider-line"></span>
-            <span class="royal-divider-motif">✦ ❖ ✦</span>
+            <span class="royal-divider-motif text-xs">✦ ❖ ✦</span>
             <span class="royal-divider-line"></span>
           </div>
 
           <!-- 3 Relax-Fit Luxury Cards: Date, Time, Venue -->
-          <div class="s5-item grid grid-cols-3 gap-1.5 sm:gap-2.5 w-full pt-0.5 sm:pt-1">
+          <div class="s5-item grid grid-cols-3 gap-1 sm:gap-2.5 w-full pt-0.5 sm:pt-1">
             <!-- Date Card -->
             <div
-              class="p-1.5 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
-              <p class="font-playfair-sc text-[9px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
+              class="p-1 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
+              <p class="font-playfair-sc text-[8px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
                 Date
               </p>
-              <p class="font-bodoni font-bold text-[10.5px] sm:text-sm md:text-base text-stone-900 leading-tight">
+              <p class="font-bodoni font-bold text-[9.5px] sm:text-sm md:text-base text-stone-900 leading-tight">
                 Wed, 23 Sep 2026
               </p>
             </div>
 
             <!-- Time Card -->
             <div
-              class="p-1.5 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
-              <p class="font-playfair-sc text-[9px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
+              class="p-1 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
+              <p class="font-playfair-sc text-[8px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
                 Time
               </p>
-              <p class="font-bodoni font-bold text-[10.5px] sm:text-sm md:text-base text-stone-900 leading-tight">
+              <p class="font-bodoni font-bold text-[9.5px] sm:text-sm md:text-base text-stone-900 leading-tight">
                 10:30 AM Onwards
               </p>
             </div>
 
             <!-- Venue Card -->
             <div
-              class="p-1.5 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
-              <p class="font-playfair-sc text-[9px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
+              class="p-1 sm:p-3 rounded-xl sm:rounded-2xl bg-gradient-to-b from-white/98 via-amber-50/85 to-amber-100/60 border border-amber-400/80 text-center flex flex-col justify-center space-y-0.5 sm:space-y-1 shadow-[0_4px_16px_rgba(180,83,9,0.12)]">
+              <p class="font-playfair-sc text-[8px] sm:text-xs uppercase tracking-[0.16em] text-amber-900 font-bold">
                 Venue
               </p>
-              <p class="font-bodoni font-bold text-[10.5px] sm:text-sm text-stone-900 leading-tight">
+              <p class="font-bodoni font-bold text-[9.5px] sm:text-sm text-stone-900 leading-tight">
                 Kadamba Gardenia
               </p>
-              <p class="text-[8.5px] sm:text-[11px] text-stone-600 font-bodoni leading-none">
+              <p class="text-[7.5px] sm:text-[11px] text-stone-600 font-bodoni leading-none">
                 Jalahalli, Bengaluru
               </p>
             </div>
           </div>
 
           <!-- Action Buttons: Maps, Calendar, Schedule (Playfair Display SC) -->
-          <div class="s5-item grid grid-cols-3 gap-2 w-full pt-1">
+          <div class="s5-item grid grid-cols-3 gap-1.5 sm:gap-2 w-full pt-0.5 sm:pt-1">
             <a id="gmapsLocationBtn" href="https://maps.app.goo.gl/nAv3u72qVnfDifBV6" target="_blank"
               rel="noopener noreferrer"
-              class="w-full h-full min-h-[38px] sm:min-h-[44px] px-2 py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[9.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
+              class="w-full h-full min-h-[32px] sm:min-h-[44px] px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[8.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
               Venue - Location
             </a>
 
-            <button onclick="addToCalendar()"
-              class="w-full h-full min-h-[38px] sm:min-h-[44px] px-2 py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[9.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
+            <a id="addToCalBtn"
+              href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Geetha%27s%20Seemantha%20Celebration&dates=20260923T050000Z/20260923T093000Z&details=You%20are%20cordially%20invited%20to%20celebrate%20the%20auspicious%20Seemantha%20ceremony%20of%20Geetha.%20With%20love%2C%20Geetha%2C%20Ashok%20%26%20Family.%0AVenue%3A%20Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%0ALocation%3A%20https%3A%2F%2Fmaps.app.goo.gl%2FnAv3u72qVnfDifBV6&location=Kadamba%20Gardenia%2C%20Jalahalli%2C%20Bengaluru%2C%20Karnataka%2C%20India"
+              target="_blank" rel="noopener noreferrer"
+              class="w-full h-full min-h-[32px] sm:min-h-[44px] px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[8.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
               Add To Calendar
-            </button>
+            </a>
 
             <button onclick="openScheduleModal()"
-              class="w-full h-full min-h-[38px] sm:min-h-[44px] px-2 py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[9.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
+              class="w-full h-full min-h-[32px] sm:min-h-[44px] px-1.5 py-1.5 sm:px-2 sm:py-2 rounded-full bg-gradient-to-r from-[#D96B84] via-[#E27D95] to-[#C85671] hover:from-[#CE5E78] hover:to-[#B74661] text-white font-playfair-sc text-[8.5px] sm:text-xs uppercase tracking-wider font-bold flex items-center justify-center text-center shadow-[0_4px_14px_rgba(217,107,132,0.35)] hover:shadow-[0_6px_20px_rgba(217,107,132,0.5)] border border-rose-200/50 transition transform hover:scale-[1.02] active:scale-98 leading-tight">
               Schedule
             </button>
           </div>
@@ -951,21 +961,21 @@
           <!-- Gratitude & Family Blessings Note: Bodoni Moda & Charm -->
           <div class="s5-item space-y-0.5 sm:space-y-1.5 w-full pt-0.5 sm:pt-1 text-center">
             <div class="flex justify-center">
-              <span class="royal-badge font-cormorant text-[10px] sm:text-sm font-bold text-amber-950 py-0.5 px-2.5">
+              <span class="royal-badge font-cormorant text-[9.5px] sm:text-sm font-bold text-amber-950 py-0.5 px-2.5">
                 <span class="text-amber-600 text-xs">✦</span> ॥ ಶುಭಮಸ್ತು ॥ <span class="text-amber-600 text-xs">✦</span>
               </span>
             </div>
-            <p class="font-bodoni italic text-[10.5px] sm:text-sm md:text-base text-stone-700 font-medium text-center">
+            <p class="font-bodoni italic text-[9.5px] sm:text-sm md:text-base text-stone-700 font-medium text-center">
               Come bless the mother-to-be and shower our little one with love and good wishes.
             </p>
-            <p class="font-charm text-lg sm:text-2xl md:text-3xl font-bold text-stone-900 text-right pr-2 pt-0.5">
+            <p class="font-charm text-base sm:text-2xl md:text-3xl font-bold text-stone-900 text-right pr-2 pt-0.5">
               With Love, Geetha Ashok & Family
             </p>
           </div>
 
           <!-- Back to Top Link: Playfair Display SC -->
           <button onclick="jumpToSection(0)"
-            class="s5-item pt-0.5 sm:pt-1 font-playfair-sc text-[10px] sm:text-xs text-stone-600 hover:text-amber-900 transition tracking-widest uppercase font-bold text-center">
+            class="s5-item pt-0.5 sm:pt-1 font-playfair-sc text-[9.5px] sm:text-xs text-stone-600 hover:text-amber-900 transition tracking-widest uppercase font-bold text-center">
             ↑ Back To Beginning
           </button>
 
@@ -1191,18 +1201,18 @@
           { x: 0, opacity: 1, duration: 1.2, stagger: 0.07, ease: 'power2.out', delay: 0.25 }
         );
       } else if (id === 'sec-4') {
-        // Section 5: Text on right -> image swipes in from right (slow butter flow)
+        // Section 5: Invitation & Venue (smooth butter flow)
         gsap.fromTo('#sec-4 .bg-slide-img',
-          { xPercent: 12, scale: 1.08, opacity: 0.5 },
-          { xPercent: 0, scale: 1, opacity: 1, duration: 2.4, ease: 'power3.out' }
+          { scale: 1.06, opacity: 0.6 },
+          { scale: 1, opacity: 1, duration: 2.2, ease: 'power3.out' }
         );
         gsap.fromTo('#sec-4 .card-sec5-right',
-          { x: 35, opacity: 0 },
-          { x: 0, opacity: 1, duration: 1.8, ease: 'power3.out', delay: 0.15 }
+          { y: 25, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.6, ease: 'power3.out', delay: 0.1 }
         );
         gsap.fromTo('#sec-4 .s5-item',
-          { y: 20, opacity: 0 },
-          { y: 0, opacity: 1, duration: 1.2, stagger: 0.07, ease: 'power2.out', delay: 0.25 }
+          { y: 12, opacity: 0 },
+          { y: 0, opacity: 1, duration: 1.0, stagger: 0.05, ease: 'power2.out', delay: 0.2 }
         );
       }
     }
